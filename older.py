@@ -14,7 +14,6 @@ with open(filename) as f:
     older = {}
     index = (1, 11)
     for i in range(len(index)):
-        # header[index[i]].split(',')
         older[header[index[i]]] = {}
     for row in reader:
         for column in index:
