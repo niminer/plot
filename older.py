@@ -12,10 +12,10 @@ with open(filename) as f:
     print(header)
 
     older = {}
-    index = (1,11)
+    index = (1, 11)
     for i in range(len(index)):
         # header[index[i]].split(',')
-         older[header[index[i]]] = {}
+        older[header[index[i]]] = {}
     for row in reader:
         for column in index:
             for item in row[column].split(','):
@@ -32,16 +32,6 @@ with open(filename) as f:
     #
     # print(xs.keys())
     print(older)
-
-
-
-    # for row in reader:
-    #     if row[6] not in edu.keys():
-    #         edu[row[6]] = 1
-    #     else:
-    #         edu[row[6]] += 1
-    #
-    # print(edu)
 
     # region, sex, date, marry, edu = [], [], [], [], []
     # cnt_sex = []
