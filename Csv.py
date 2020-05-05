@@ -66,15 +66,14 @@ class CSVPlotter():
         # print(sorted(x))
         # print(yy[0, :])
         # print(yy[1, :])
-        return sorted(x),yy[0,:],yy[1,:],z
+        return sorted(x),yy,yy[0,:],yy[1,:],z
 
-
-my_c = CSVPlotter('older.csv')
-index = (1,9)
-cc = my_c.get1dcolumn(index)
-index = (9,12)
-ff = my_c.get2dcolumn(index)
-print(cc)
-print(ff)
+# my_c = CSVPlotter('older.csv')
+# index = (1,9)
+# cc = my_c.get1dcolumn(index)
+# index = (9,12)
+# ff = my_c.get2dcolumn(index)
+# print(cc)
+# print(ff[3])
 
 
