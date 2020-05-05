@@ -11,8 +11,9 @@ with open(filename) as f:
     header = next(reader)
     print(header)
 
+
     older = {}
-    index = (1, 11)
+    index = (1, 2,6,8,9,10,11,12)
     for i in range(len(index)):
         older[header[index[i]]] = {}
     for row in reader:
@@ -31,6 +32,9 @@ with open(filename) as f:
     #
     # print(xs.keys())
     print(older)
+
+
+
 
     # region, sex, date, marry, edu = [], [], [], [], []
     # cnt_sex = []
@@ -84,10 +88,12 @@ with open(filename) as f:
     # )
     # c.render("pie_region.html")
     #
-    # bar = (
-    #     Bar(init_opts=opts.InitOpts(height="500px", width="500px"))
-    #     .add_xaxis(cnt_edu_flag)
-    #     .add_yaxis("文化程度", cnt_edu)
-    #     .set_global_opts(title_opts=opts.TitleOpts(title="文化程度"))
-    # )
-    # bar.render()
+c = (
+    Pie()
+    .add("", [list(z) for z in zip(older['住房情况'].keys(), older['住房情况'].values())])
+    .set_global_opts(title_opts=opts.TitleOpts(title="Pie-住房情况"))
+    .set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
+    .render("pie_region.html")
+)
+
+
